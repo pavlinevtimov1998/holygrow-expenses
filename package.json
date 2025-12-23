@@ -1,0 +1,16 @@
+{
+  "name": "holygrow-expenses",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "npm --workspace apps/api run start:dev",
+    "dev:web": "npm --workspace apps/web run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
